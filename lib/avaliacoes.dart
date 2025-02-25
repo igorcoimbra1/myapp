@@ -223,7 +223,54 @@ class _AvaliacoesState extends State<Avaliacoes> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Text(
-                                            'Nome do local',
+                                            'Independência Shopping',
+                                            style: TextStyle(
+                                              color: Color.fromARGB(
+                                                255,
+                                                239,
+                                                239,
+                                                239,
+                                              ),
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                        width: largura * 0.9,
+                                        decoration: BoxDecoration(
+                                          color: Color.fromARGB(
+                                            255,
+                                            66,
+                                            66,
+                                            66,
+                                          ),
+                                          borderRadius: BorderRadius.circular(
+                                            10,
+                                          ),
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black.withOpacity(
+                                                0.3,
+                                              ), // Cor da sombra com opacidade
+                                              spreadRadius:
+                                                  3, // O quão grande a sombra se espalha
+                                              blurRadius:
+                                                  7, // O quão borrada a sombra está
+                                              offset: Offset(
+                                                0,
+                                                3,
+                                              ), // Deslocamento da sombra (x, y)
+                                            ),
+                                          ],
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text(
+                                            'Universidade Federal de Juiz de Fora',
                                             style: TextStyle(
                                               color: Color.fromARGB(
                                                 255,

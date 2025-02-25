@@ -268,19 +268,26 @@ class _MyHomePageState extends State<MyHomePage> {
                                       ),
                                     ),
                                     GestureDetector(
-                                      onTap: () => Navigator.pushNamed(context, 'local'),
+                                      onTap:
+                                          () => Navigator.pushNamed(
+                                            context,
+                                            'local',
+                                          ),
                                       child: SizedBox(
                                         height: 80,
                                         child: ListView(
                                           scrollDirection: Axis.horizontal,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsets.all(8.0),
+                                              padding: const EdgeInsets.all(
+                                                8.0,
+                                              ),
                                               child: Container(
                                                 decoration: BoxDecoration(
-                                                  borderRadius: BorderRadius.all(
-                                                    Radius.circular(20),
-                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                        Radius.circular(20),
+                                                      ),
                                                   color: Color.fromARGB(
                                                     255,
                                                     239,
@@ -319,12 +326,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsets.all(8.0),
+                                              padding: const EdgeInsets.all(
+                                                8.0,
+                                              ),
                                               child: Container(
                                                 decoration: BoxDecoration(
-                                                  borderRadius: BorderRadius.all(
-                                                    Radius.circular(20),
-                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                        Radius.circular(20),
+                                                      ),
                                                   color: Color.fromARGB(
                                                     255,
                                                     239,
@@ -363,12 +373,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsets.all(8.0),
+                                              padding: const EdgeInsets.all(
+                                                8.0,
+                                              ),
                                               child: Container(
                                                 decoration: BoxDecoration(
-                                                  borderRadius: BorderRadius.all(
-                                                    Radius.circular(20),
-                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                        Radius.circular(20),
+                                                      ),
                                                   color: Color.fromARGB(
                                                     255,
                                                     239,
@@ -383,7 +396,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                                   child: Row(
                                                     children: [
                                                       Icon(
-                                                        Icons.restaurant_outlined,
+                                                        Icons
+                                                            .restaurant_outlined,
                                                         color: Color.fromARGB(
                                                           255,
                                                           50,
@@ -425,67 +439,74 @@ class _MyHomePageState extends State<MyHomePage> {
                                     height: altura / 100 * 15,
                                     child: ListView(
                                       children: [
-                                        Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: [
-                                            Icon(
-                                              Icons.restore_outlined,
-                                              color: Color.fromARGB(
-                                                255,
-                                                239,
-                                                239,
-                                                239,
+                                        GestureDetector(
+                                          onTap:
+                                              () => Navigator.pushNamed(
+                                                context,
+                                                'local',
                                               ),
-                                            ),
-                                            Padding(
-                                              padding: const EdgeInsets.all(
-                                                8.0,
+                                          child: Row(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Icon(
+                                                Icons.restore_outlined,
+                                                color: Color.fromARGB(
+                                                  255,
+                                                  239,
+                                                  239,
+                                                  239,
+                                                ),
                                               ),
-                                              child: Column(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  SizedBox(
-                                                    width: largura - 100,
-                                                    child: Text(
-                                                      'Universidade Federal de Juiz de Fora',
-                                                      style: TextStyle(
-                                                        color: Color.fromARGB(
-                                                          255,
-                                                          239,
-                                                          239,
-                                                          239,
+                                              Padding(
+                                                padding: const EdgeInsets.all(
+                                                  8.0,
+                                                ),
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    SizedBox(
+                                                      width: largura - 100,
+                                                      child: Text(
+                                                        'Universidade Federal de Juiz de Fora',
+                                                        style: TextStyle(
+                                                          color: Color.fromARGB(
+                                                            255,
+                                                            239,
+                                                            239,
+                                                            239,
+                                                          ),
+                                                          fontSize: 20,
                                                         ),
-                                                        fontSize: 20,
+                                                        softWrap: true,
+                                                        overflow:
+                                                            TextOverflow.clip,
                                                       ),
-                                                      softWrap: true,
-                                                      overflow:
-                                                          TextOverflow.clip,
                                                     ),
-                                                  ),
-                                                  SizedBox(
-                                                    width: largura - 100,
-                                                    child: Text(
-                                                      'Campus Universitário, Rua José Lourenço Kelmer, s/n - São Pedro, Juiz de Fora - MG',
-                                                      style: TextStyle(
-                                                        color: Color.fromARGB(
-                                                          255,
-                                                          239,
-                                                          239,
-                                                          239,
+                                                    SizedBox(
+                                                      width: largura - 100,
+                                                      child: Text(
+                                                        'Campus Universitário, Rua José Lourenço Kelmer, s/n - São Pedro, Juiz de Fora - MG',
+                                                        style: TextStyle(
+                                                          color: Color.fromARGB(
+                                                            255,
+                                                            239,
+                                                            239,
+                                                            239,
+                                                          ),
+                                                          fontSize: 12,
                                                         ),
-                                                        fontSize: 12,
+                                                        softWrap: true,
+                                                        overflow:
+                                                            TextOverflow.clip,
                                                       ),
-                                                      softWrap: true,
-                                                      overflow:
-                                                          TextOverflow.clip,
                                                     ),
-                                                  ),
-                                                ],
+                                                  ],
+                                                ),
                                               ),
-                                            ),
-                                          ],
+                                            ],
+                                          ),
                                         ),
                                         Row(
                                           crossAxisAlignment:

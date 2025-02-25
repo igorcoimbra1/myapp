@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:geolocator/geolocator.dart';
 
-class Menu extends StatefulWidget {
-  const Menu({super.key});
+class Favoritos extends StatefulWidget {
+  const Favoritos({super.key});
 
   @override
-  State<Menu> createState() => _MenuState();
+  State<Favoritos> createState() => _FavoritosState();
 }
 
-class _MenuState extends State<Menu> {
+class _FavoritosState extends State<Favoritos> {
   LatLng? _currentLocation;
   final MapController _mapController = MapController();
 
@@ -57,6 +58,7 @@ class _MenuState extends State<Menu> {
     return LayoutBuilder(
       builder: (context, constraints) {
         var altura = constraints.maxHeight;
+        var largura = constraints.maxWidth;
         const defaultLocation = LatLng(-21.77511, -43.37196);
         final initialLocation = _currentLocation ?? defaultLocation;
 
@@ -114,7 +116,7 @@ class _MenuState extends State<Menu> {
                           child: FittedBox(
                             child: FloatingActionButton(
                               onPressed:
-                                  () => Navigator.pushNamed(context, 'home'),
+                                  () => Navigator.pushNamed(context, 'menu'),
                               tooltip: 'Menu',
                               elevation: 2,
                               foregroundColor: const Color.fromARGB(
@@ -161,6 +163,7 @@ class _MenuState extends State<Menu> {
                     children: [
                       Container(
                         height: altura / 100 * 85,
+                        width: largura,
                         decoration: BoxDecoration(
                           color: Color.fromARGB(255, 50, 50, 50),
                           borderRadius: BorderRadius.only(
@@ -182,188 +185,154 @@ class _MenuState extends State<Menu> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(top: 20, left: 20),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  GestureDetector(
-                                    onTap:
-                                        () => Navigator.pushNamed(
-                                          context,
-                                          'avaliacoes',
-                                        ),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          Icons.star_outline,
+                              padding: const EdgeInsets.all(10.0),
+                              child: SizedBox(
+                                height: altura * 0.75,
+                                child: ListView(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                        width: largura * 0.9,
+                                        decoration: BoxDecoration(
                                           color: Color.fromARGB(
                                             255,
-                                            182,
-                                            182,
-                                            182,
+                                            66,
+                                            66,
+                                            66,
                                           ),
-                                          size: 30,
+                                          borderRadius: BorderRadius.circular(
+                                            10,
+                                          ),
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black.withOpacity(
+                                                0.3,
+                                              ), // Cor da sombra com opacidade
+                                              spreadRadius:
+                                                  3, // O quão grande a sombra se espalha
+                                              blurRadius:
+                                                  7, // O quão borrada a sombra está
+                                              offset: Offset(
+                                                0,
+                                                3,
+                                              ), // Deslocamento da sombra (x, y)
+                                            ),
+                                          ],
                                         ),
-                                        Padding(
-                                          padding: const EdgeInsets.all(10.0),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
                                           child: Text(
-                                            'Minhas Avaliações',
+                                            'Araújo',
                                             style: TextStyle(
                                               color: Color.fromARGB(
                                                 255,
-                                                182,
-                                                182,
-                                                182,
+                                                239,
+                                                239,
+                                                239,
                                               ),
-                                              fontSize: 25,
+                                              fontSize: 20,
                                             ),
                                           ),
                                         ),
-                                      ],
+                                      ),
                                     ),
-                                  ),
-                                  GestureDetector(
-                                    onTap:
-                                        () => Navigator.pushNamed(
-                                          context,
-                                          'favoritos',
-                                        ),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          Icons.favorite_outline,
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                        width: largura * 0.9,
+                                        decoration: BoxDecoration(
                                           color: Color.fromARGB(
                                             255,
-                                            182,
-                                            182,
-                                            182,
+                                            66,
+                                            66,
+                                            66,
                                           ),
-                                          size: 30,
+                                          borderRadius: BorderRadius.circular(
+                                            10,
+                                          ),
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black.withOpacity(
+                                                0.3,
+                                              ), // Cor da sombra com opacidade
+                                              spreadRadius:
+                                                  3, // O quão grande a sombra se espalha
+                                              blurRadius:
+                                                  7, // O quão borrada a sombra está
+                                              offset: Offset(
+                                                0,
+                                                3,
+                                              ), // Deslocamento da sombra (x, y)
+                                            ),
+                                          ],
                                         ),
-                                        Padding(
-                                          padding: const EdgeInsets.all(10.0),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
                                           child: Text(
-                                            'Favoritos',
+                                            'Universidade Federal de Juiz de Fora',
                                             style: TextStyle(
                                               color: Color.fromARGB(
                                                 255,
-                                                182,
-                                                182,
-                                                182,
+                                                239,
+                                                239,
+                                                239,
                                               ),
-                                              fontSize: 25,
+                                              fontSize: 20,
                                             ),
                                           ),
                                         ),
-                                      ],
+                                      ),
                                     ),
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.notifications_outlined,
-                                        color: Color.fromARGB(
-                                          255,
-                                          182,
-                                          182,
-                                          182,
-                                        ),
-                                        size: 30,
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Text(
-                                          'Notificações',
-                                          style: TextStyle(
-                                            color: Color.fromARGB(
-                                              255,
-                                              182,
-                                              182,
-                                              182,
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                        width: largura * 0.9,
+                                        decoration: BoxDecoration(
+                                          color: Color.fromARGB(
+                                            255,
+                                            66,
+                                            66,
+                                            66,
+                                          ),
+                                          borderRadius: BorderRadius.circular(
+                                            10,
+                                          ),
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black.withOpacity(
+                                                0.3,
+                                              ), // Cor da sombra com opacidade
+                                              spreadRadius:
+                                                  3, // O quão grande a sombra se espalha
+                                              blurRadius:
+                                                  7, // O quão borrada a sombra está
+                                              offset: Offset(
+                                                0,
+                                                3,
+                                              ), // Deslocamento da sombra (x, y)
                                             ),
-                                            fontSize: 25,
+                                          ],
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text(
+                                            'Estádio Municipal',
+                                            style: TextStyle(
+                                              color: Color.fromARGB(
+                                                255,
+                                                239,
+                                                239,
+                                                239,
+                                              ),
+                                              fontSize: 20,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.qr_code_2_outlined,
-                                        color: Color.fromARGB(
-                                          255,
-                                          182,
-                                          182,
-                                          182,
-                                        ),
-                                        size: 30,
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Text(
-                                          'Leitor QR Code',
-                                          style: TextStyle(
-                                            color: Color.fromARGB(
-                                              255,
-                                              182,
-                                              182,
-                                              182,
-                                            ),
-                                            fontSize: 25,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.support_agent_outlined,
-                                        color: Color.fromARGB(
-                                          255,
-                                          182,
-                                          182,
-                                          182,
-                                        ),
-                                        size: 30,
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Text(
-                                          'Suporte',
-                                          style: TextStyle(
-                                            color: Color.fromARGB(
-                                              255,
-                                              182,
-                                              182,
-                                              182,
-                                            ),
-                                            fontSize: 25,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ],

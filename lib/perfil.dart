@@ -193,7 +193,7 @@ class _PerfilState extends State<Perfil> {
                                   Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: Text(
-                                      'Nome Sobrenome',
+                                      'Lana Silva',
                                       style: TextStyle(
                                         color: Color.fromARGB(255, 239, 239, 239),
                                         fontSize: 25,
@@ -213,7 +213,7 @@ class _PerfilState extends State<Perfil> {
                                   Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: Text(
-                                      '23 anos',
+                                      '20 anos',
                                       style: TextStyle(
                                         color: Color.fromARGB(255, 239, 239, 239),
                                         fontSize: 25,
@@ -238,14 +238,20 @@ class _PerfilState extends State<Perfil> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: Container(
-                                      height: 50,
-                                      width: 350,
-                                      decoration: BoxDecoration(
-                                        color: Color.fromARGB(255, 239, 239, 239),
-                                        borderRadius: BorderRadius.circular(10),
+                                    child: GestureDetector(
+                                      onTap: () => Navigator.pushNamed(
+                                          context,
+                                          'login',
+                                        ),
+                                      child: Container(
+                                        height: 50,
+                                        width: 350,
+                                        decoration: BoxDecoration(
+                                          color: Color.fromARGB(255, 239, 239, 239),
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Center(child: Text('Sair', style: TextStyle(color: Color.fromARGB(255, 50, 50, 50), fontSize: 20),)),
                                       ),
-                                      child: Center(child: Text('Sair', style: TextStyle(color: Color.fromARGB(255, 50, 50, 50), fontSize: 20),)),
                                     ),
                                   ),
                                 ],

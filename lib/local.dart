@@ -175,7 +175,11 @@ class _LocalState extends State<Local> {
                           children: [
                             GestureDetector(
                               onTap: () => Navigator.pushNamed(context, 'home'),
-                              child: Icon(Icons.keyboard_arrow_down_rounded, color: Color.fromARGB(255, 182, 182, 182),)),
+                              child: Icon(
+                                Icons.keyboard_arrow_down_rounded,
+                                color: Color.fromARGB(255, 182, 182, 182),
+                              ),
+                            ),
                             Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -295,7 +299,7 @@ class _LocalState extends State<Local> {
                                                             right: 8.0,
                                                           ),
                                                       child: Text(
-                                                        'Nome Sobrenome',
+                                                        'Lana Silva',
                                                         style: TextStyle(
                                                           color: Color.fromARGB(
                                                             255,
@@ -371,7 +375,7 @@ class _LocalState extends State<Local> {
                                                 child: SizedBox(
                                                   width: largura * 0.75,
                                                   child: Text(
-                                                    'Estudei na UFJF e foi uma experiência incrível! O campus é lindo, cheio de áreas verdes ...',
+                                                    'Ótima variedade de lojas, ambiente agradável e uma praça de alimentação com muitas opções.',
                                                     style: TextStyle(
                                                       color: Color.fromARGB(
                                                         255,
@@ -443,7 +447,7 @@ class _LocalState extends State<Local> {
                                                             right: 8.0,
                                                           ),
                                                       child: Text(
-                                                        'Nome Sobrenome',
+                                                        'Igor Titoneli',
                                                         style: TextStyle(
                                                           color: Color.fromARGB(
                                                             255,
@@ -519,7 +523,7 @@ class _LocalState extends State<Local> {
                                                 child: SizedBox(
                                                   width: largura * 0.75,
                                                   child: Text(
-                                                    'Estudei na UFJF e foi uma experiência incrível! O campus é lindo, cheio de áreas verdes ...',
+                                                    'Fomos muito bem atendidos em todas as lojas que visitamos, é bem localizado, seguro, e a praça de alimentação tem bastante variedade.',
                                                     style: TextStyle(
                                                       color: Color.fromARGB(
                                                         255,
@@ -591,7 +595,7 @@ class _LocalState extends State<Local> {
                                                             right: 8.0,
                                                           ),
                                                       child: Text(
-                                                        'Nome Sobrenome',
+                                                        'Gabriel Tavares',
                                                         style: TextStyle(
                                                           color: Color.fromARGB(
                                                             255,
@@ -667,7 +671,7 @@ class _LocalState extends State<Local> {
                                                 child: SizedBox(
                                                   width: largura * 0.75,
                                                   child: Text(
-                                                    'Estudei na UFJF e foi uma experiência incrível! O campus é lindo, cheio de áreas verdes ...',
+                                                    'Fácil acesso, muitas lojas, praça de alimentação variada e ambientes limpos. Super recomendo!.',
                                                     style: TextStyle(
                                                       color: Color.fromARGB(
                                                         255,
@@ -739,7 +743,7 @@ class _LocalState extends State<Local> {
                                                             right: 8.0,
                                                           ),
                                                       child: Text(
-                                                        'Nome Sobrenome',
+                                                        'Igor Coimbra',
                                                         style: TextStyle(
                                                           color: Color.fromARGB(
                                                             255,
@@ -815,7 +819,7 @@ class _LocalState extends State<Local> {
                                                 child: SizedBox(
                                                   width: largura * 0.75,
                                                   child: Text(
-                                                    'Estudei na UFJF e foi uma experiência incrível! O campus é lindo, cheio de áreas verdes ...',
+                                                    'Achei que o shopping poderia ter mais opções de lojas e restaurantes, mas no geral é um bom lugar para fazer compras.',
                                                     style: TextStyle(
                                                       color: Color.fromARGB(
                                                         255,
@@ -852,7 +856,8 @@ class _LocalState extends State<Local> {
                                     ),
                                     child: Center(
                                       child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
                                         children: [
                                           Icon(Icons.star_outline),
                                           Text(
@@ -883,7 +888,8 @@ class _LocalState extends State<Local> {
                                     ),
                                     child: Center(
                                       child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
                                         children: [
                                           Icon(Icons.favorite_outline),
                                           Text(
