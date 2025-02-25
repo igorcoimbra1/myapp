@@ -186,7 +186,7 @@ class _AvaliacoesState extends State<Avaliacoes> {
                             ),
                             Padding(
                               padding: const EdgeInsets.all(10.0),
-                              child: Container(
+                              child: SizedBox(
                                 height: altura * 0.75,
                                 child: ListView(
                                   children: [

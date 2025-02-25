@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Vai uma dica aí?',
       debugShowCheckedModeBanner: false,
-      initialRoute: "avaliacoes",
+      initialRoute: "home",
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
